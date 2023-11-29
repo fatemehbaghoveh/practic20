@@ -1,0 +1,15 @@
+def is_square_number(num):
+    a = int(num**0.5)
+    return a **2 == num
+while True:
+    try:
+        a = int(input("Enter a number to check if it's a square number (enter 0 to exit): "))
+        
+        if a == 0:
+            break
+        if is_square_number(a):
+            print(f"{a} is a square number.")
+        else:
+            print(f"{a} is not a square number.")
+    except ValueError:
+        print("Please enter a valid integer.")
